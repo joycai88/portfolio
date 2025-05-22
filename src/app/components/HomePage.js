@@ -12,15 +12,15 @@ export default function HomePage() {
         }, 2000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [interests.length]);
 
   return (
     <div className="flex flex-col md:flex-row p-6">
       <div className="md:w-1/2">
         <div className="h-screen w-screen flex flex-col items-start justify-center">
-            <h1 className="text-3xl font-bold text-black mb-4">Hi, I'm Joy!</h1>
-            <h2 className="text-black">and i'm a software engineer</h2>
-            <h2 className="text-black">who's interested in {" "}
+            <h1 className="text-3xl font-bold text-black mb-4">Hi, I&apos;m Joy!</h1>
+            <h2 className="text-black">and I&apos;m a software engineer</h2>
+            <h2 className="text-black">who&apos;s interested in{" "}
                 <span className="font-semibold text-blue-700 transition-opacity duration-500 ease-in-out">
                     {interests[index]}</span>
             </h2>
