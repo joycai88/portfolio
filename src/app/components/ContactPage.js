@@ -1,41 +1,42 @@
+import { MdEmail } from 'react-icons/md';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+
 export default function ContactPage() {
   return (
-    <div className="bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-lg border-2 border-blue-700">
-      <h2 className="text-3xl font-bold text-blue-800 mb-6">Contact Me</h2>
+    <div className="">
+      <h2 className="text-3xl font-bold text-black mb-6">Contact Me</h2>
       
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/2">
-          <div className="bg-green-100 p-5 rounded-lg border-2 border-green-400 shadow-md mb-6">
-            <h3 className="text-xl font-bold text-green-800 mb-3">Find Me Around Town</h3>
+          <div className="p-5 mb-6">
             <div className="space-y-3">
               <div className="flex items-center">
-                <div className="bg-green-200 p-2 rounded-full mr-3">
-                  <span className="font-bold text-green-700">📧</span>
+                <div className="bg-blue-200 p-2 rounded-full mr-3">
+                  <MdEmail className="text-blue-700" />
                 </div>
-                <span className="text-green-800">joycai.0205@gmail.com</span>
+                <a href="mailto:joycai.0205@gmail.com" className="text-black hover:underline">
+                  joycai.0205@gmail.com
+                </a>
               </div>
-              
+
               <div className="flex items-center">
-                <div className="bg-green-200 p-2 rounded-full mr-3">
-                  <span className="font-bold text-green-700">💼</span>
+                <div className="bg-blue-200 p-2 rounded-full mr-3">
+                  <FaLinkedin className="text-blue-700" />
                 </div>
-                <span className="text-green-800">linkedin.com/in/joycai0205/</span>
+                <a href="https://linkedin.com/in/joycai0205/" target="_blank" rel="noopener noreferrer" className="text-black hover:underline">
+                  linkedin.com/in/joycai0205/
+                </a>
               </div>
-              
+
               <div className="flex items-center">
-                <div className="bg-green-200 p-2 rounded-full mr-3">
-                  <span className="font-bold text-green-700">💻</span>
+                <div className="bg-blue-200 p-2 rounded-full mr-3">
+                  <FaGithub className="text-blue-700" />
                 </div>
-                <span className="text-green-800">github.com/joycai88</span>
+                <a href="https://github.com/joycai88" target="_blank" rel="noopener noreferrer" className="text-black hover:underline">
+                  github.com/joycai88
+                </a>
               </div>
             </div>
-          </div>
-          
-          <div className="bg-amber-100 p-5 rounded-lg border-2 border-amber-400 shadow-md">
-            <h3 className="text-xl font-bold text-amber-800 mb-3">Availability</h3>
-            <p className="text-amber-700 mb-2">
-              Currently seeking Fall 2025 internships!
-            </p>
           </div>
         </div>
       </div>

@@ -1,23 +1,31 @@
+import { useEffect, useState } from "react";
+import AboutPage from "./AboutPage";
+
 export default function HomePage() {
+    
+    const interests = ["ai", "full-stack development", "databases", "machine learning", "innovative technologies", "algorithm design", "healthcare"];
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % interests.length);
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
+
   return (
-    <div
-      className="flex flex-col md:flex-row items-center bg-amber-50 p-6 rounded-lg border-2 border-yellow-700"
-    >
+    <div className="flex flex-col md:flex-row p-6">
       <div className="md:w-1/2">
-        <h2 className="text-3xl font-bold text-blue-800 mb-4">Hi, I'm Joy!</h2>
-        <div className="bg-yellow-100 p-4 rounded-lg border-2 border-yellow-600 mb-4 shadow-md">
-          <p className="text-lg text-blue-900">
-            Welcome to my personal website! It's still very much in development but I hope to better showcase my skills here.
-          </p>
+        <div className="h-screen w-screen flex flex-col items-start justify-center">
+            <h1 className="text-3xl font-bold text-black mb-4">Hi, I'm Joy!</h1>
+            <h2 className="text-black">and i'm a software engineer</h2>
+            <h2 className="text-black">who's interested in {" "}
+                <span className="font-semibold text-blue-700 transition-opacity duration-500 ease-in-out">
+                    {interests[index]}</span>
+            </h2>
         </div>
-        <p className="text-blue-800 mb-4">
-          I love playing Stardew Valley, so my personal website is inspired by my farm.
-        </p>
-        <div className="flex flex-wrap gap-2">
-          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-lg border border-blue-300">React</span>
-          <span className="bg-green-100 text-green-800 px-3 py-1 rounded-lg border border-green-300">JavaScript</span>
-          <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-lg border border-purple-300">Next.js</span>
-        </div>
+        <AboutPage />
       </div>
     </div>
   );
