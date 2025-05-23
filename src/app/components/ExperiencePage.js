@@ -87,6 +87,55 @@ export default function ExperiencePage() {
           </div>
         ))}
       </div>
+      {/* Relevant Courses Section */}
+      <h2 className="text-3xl font-bold text-black mb-6 mt-6">Relevant Courses</h2>
+      <div className="space-y-6">
+
+        {/* Computer Science Courses */}
+        <div className="bg-white p-5 rounded-lg border-2 border-gray-400 shadow-md">
+          <h3 className="text-xl font-bold text-black mb-3">Computer Science</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>2022W - CPSC 110: Computation, Programs, and Programming</li>
+            <li>2022W - CPSC 121: Models of Computation</li>
+            <li>2022W - CPSC 210: Software Construction</li>
+            <li>2023W - CPSC 221: Basic Algorithms and Data Structures</li>
+            <li>2024W - CPSC 320: Intermediate Algorithm Design and Analysis</li>
+            <li>2024W - CPSC 310: Introduction to Software Engineering</li>
+            <li>2024W - CPSC 213: Introduction to Computer Systems</li>
+            <li>2024W - CPSC 304: Introduction to Relational Databases</li>
+            <li>2024W - CPSC 344: Introduction to Human Computer Interaction Methods</li>
+            <li>2025S - CPSC 330: Applied Machine Learning</li>
+          </ul>
+        </div>
+
+        {/* Psychology Courses */}
+        <div className="bg-white p-5 rounded-lg border-2 border-gray-400 shadow-md">
+          <h3 className="text-xl font-bold text-black mb-3">Psychology</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>2022W - PSYC 101: Introduction to Biological and Cognitive Psychology</li>
+            <li>2024W - PSYC 102: Introduction to Developmental, Social, Personality, and Clinical Psychology</li>
+            <li>2023W - PSYC 207: Contemporary Topics in Biological and Cognitive Psychology</li>
+            <li>2025S - PSYC 301: Brain Dysfunction and Recovery</li>
+          </ul>
+        </div>
+
+        {/* Other Courses */}
+        <div className="bg-white p-5 rounded-lg border-2 border-gray-400 shadow-md">
+          <h3 className="text-xl font-bold text-black mb-3">Other</h3>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>2022W - MATH 100: Differential Calculus with Applications</li>
+            <li>2022W - MATH 101: Integral Calculus with Applications</li>
+            <li>2023W - MATH 200: Calculus III</li>
+            <li>2024W - MATH 221: Matrix Algebra</li>
+            <li>2023W - STAT 251: Elementary Statistics</li>
+            <li>2022W - DSCI 100: Introduction to Data Science</li>
+            <li>2022W - SCIE 113: First-Year Seminar in Science</li>
+            <li>2022W - NURS 180: Stress and Strategies to Promote Well Being</li>
+            <li>2022W - PHYS 131: Energy and Waves (Lecture)</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   );
 }
